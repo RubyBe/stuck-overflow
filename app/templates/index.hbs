@@ -3,7 +3,8 @@
 <h4>A wealth of stuck!</h4>
 <ul>
   {{#each model as |answer|}}
-    {{answer-tile answer=answer update="update" destroyAnswer='destroyAnswer'}}
+    {{answer-tile answer=answer}}
+    <!-- {{answer-tile answer=answer update="update" destroyAnswer='destroyAnswer'}} -->
   {{/each}}
 </ul>
 
