@@ -7,6 +7,12 @@ export default Ember.Route.extend({
   },
 
   actions: {
+    saveAnswer(params) {
+      var newAnswer = this.store.createRecord('answer', params);
+      newAnswer.save();
+      this.transitionTo('index');
+    },
+
     destroyAnswer(answer) {
       answer.destroyRecord();
       this.transitionTo('index');
