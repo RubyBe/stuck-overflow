@@ -1,0 +1,13 @@
+<h1>Stuck Overflow</h1>
+
+<h4>A wealth of stuck!</h4>
+<ul>
+  {{#each model as |answer|}}
+    <li>{{answer.author}}</li>
+    <li>{{answer.question}}</li>
+    <li>{{answer.content}}</li>
+    <li>{{answer.details}}</li>
+    <li> <img src="{{answer.image}}" alt="" /> </li>
+  {{/each}}
+</ul>
+Ask your question about anything here, or answer an existing question.
