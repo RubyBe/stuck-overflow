@@ -11,5 +11,14 @@
     "content": "I are fine",
     "details": "Duh Doh.",
     "image": "./public/docgonzo.jpg"
+  }],
+  "questions": [{
+    "title": "Who are you?",
+    "content": "Can you explain to me who you are?",
+    "answer": "TBD"
+  }, {
+    "title": "Who was that?",
+    "content": "Can you explain to me who that was?",
+    "answer": "Also TBD"
   }]
 }

@@ -1,8 +1,16 @@
 <h4>A wealth of stuck!</h4>
+
+<h3>Questions</h3>
 <ul>
-  {{#each model as |answer|}}
+  {{#each model.questions as |question|}}
+    {{question.title}}
+  {{/each}}
+</ul>
+
+<h3>Answers</h3>
+<ul>
+  {{#each model.answers as |answer|}}
     {{answer-tile answer=answer}}
-    <!-- {{answer-tile answer=answer update="update" destroyAnswer='destroyAnswer'}} -->
   {{/each}}
 </ul>
 
