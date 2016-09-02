@@ -4,5 +4,6 @@
     {{else}}
       <button {{action 'imageShow'}}>Show Image</button>
     {{/if}}
+    {{update-answer answer=answer update="update"}}
     <button {{action 'delete' answer}}>Delete this Answer</button>
   </li>
