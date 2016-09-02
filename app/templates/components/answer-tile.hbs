@@ -1,0 +1,8 @@
+  <li> Author {{answer.author}}'s answer to {{answer.question}} is: {{answer.content}}
+    {{#if isImageShowing }}
+     <p><img src="https://en.wikipedia.org/wiki/File:Collage_of_Nine_Dogs.jpg" {{action 'imageHide'}}/></p>
+    {{else}}
+      <button {{action 'imageShow'}}>Show Image</button>
+    {{/if}}
+    <button {{action 'delete' answer}}>Delete this Answer</button>
+  </li>

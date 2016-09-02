@@ -3,11 +3,7 @@
 <h4>A wealth of stuck!</h4>
 <ul>
   {{#each model as |answer|}}
-    <li>{{answer.author}}</li>
-    <li>{{answer.question}}</li>
-    <li>{{answer.content}}</li>
-    <li>{{answer.details}}</li>
-    <li> <img src="https://en.wikipedia.org/wiki/File:Collage_of_Nine_Dogs.jpg" alt="" /> </li>
+    {{answer-tile answer=answer}}
   {{/each}}
 </ul>
 Ask your question about anything here, or answer an existing question.
