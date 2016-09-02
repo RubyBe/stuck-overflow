@@ -13,6 +13,13 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+      apiKey: process.env.apiKey,
+      authDomain: "stuck-overflow-3aba2.firebaseapp.com",
+      databaseURL: "https://stuck-overflow-3aba2.firebaseio.com",
+      storageBucket: "stuck-overflow-3aba2.appspot.com"
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

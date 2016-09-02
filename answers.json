@@ -1,15 +1,15 @@
-{ answers: [
+{ "answers": [
   {
-    author: "Doc Gonzo",
-    question: "How are you?",
-    content: "Fine, thank you",
-    details: "Not sure in which context this is meant.",
-    image: "./public/docgonzo.jpg"
+    "author": "Doc Gonzo",
+    "question": "How are you?",
+    "content": "Fine, thank you",
+    "details": "Not sure in which context this is meant.",
+    "image": "./public/docgonzo.jpg"
   }, {
-    author: "Mouse",
-    question: "How you be?",
-    content: "I are fine",
-    details: "Duh Doh.",
-    image: "./public/docgonzo.jpg"
-  }
-];
+    "author": "Mouse",
+    "question": "How you be?",
+    "content": "I are fine",
+    "details": "Duh Doh.",
+    "image": "./public/docgonzo.jpg"
+  }]
+}
