@@ -1,20 +1,40 @@
-<h3><em>You think you're stuck? So is almost everyone else!</em></h3>
-<h2>Welcome to an Overflow of Stuck</h2>
+<div class="container" id="tagline">
+  <h3><em>You think you're stuck? So is almost everyone else!</em></h3>
+  <h2>Welcome to an Overflow of Stuck</h2>
+</div>
 
-Ask your question about anything here, or click an existing question to add an answer.
+<div class="container" id="instructions">
+  Ask your question about anything here, or click an existing question to add an answer.
+</div>
 
-<h3>Questions</h3>
-<ul>
-  {{#each model.questions as |question|}}
-    <li>{{#link-to 'question' question.id}} {{question.title}} {{/link-to}}</li>
-  {{/each}}
-</ul>
-
-{{new-question saveQuestion="saveQuestion"}}
-
-<h4>Or just browse all answers</h4>
-<ul>
-  {{#each model.answers as |answer|}}
+<div class="container" id="questions">
+  <h3>Top Questions</h3>
+  <div class="row">
+    <div class="col-xs-2">
+      <p>votes</p>
+    </div>
+    <div class="col-xs-2">
+      <p>answers</p>
+    </div>
+    <div class="col-xs-2">
+      <p>views</p>
+    </div>
+    <div class="col-xs-6">
+      <ul>
+        {{#each model.questions as |question|}}
+        <li>{{#link-to 'question' question.id}} {{question.title}} {{/link-to}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  {{new-question saveQuestion="saveQuestion"}}
+</div>
+<hr />
+<div class="container" id="answers">
+  <h4>Or just browse all answers</h4>
+  <ul>
+    {{#each model.answers as |answer|}}
     {{answer-tile answer=answer}}
-  {{/each}}
-</ul>
+    {{/each}}
+  </ul>
+</div>
