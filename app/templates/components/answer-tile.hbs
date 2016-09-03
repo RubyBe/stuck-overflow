@@ -1,4 +1,4 @@
-  <li> {{#link-to 'answer' answer.id}} Author {{answer.author}}'s answer to {{answer.question}} is: {{answer.content}} {{/link-to}}
+  <li> {{#link-to 'answer' answer.id}} Author {{answer.author}}'s answer to {{answer.question.title}} is: {{answer.content}} {{/link-to}}
     {{#if isImageShowing }}
      <p><img src={{answer.image}} {{action 'imageHide'}}/></p>
     {{else}}

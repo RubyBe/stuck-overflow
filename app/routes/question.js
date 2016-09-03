@@ -5,19 +5,28 @@ export default Ember.Route.extend({
     return this.store.findRecord('question', params.question_id);
   },
   actions: {
-    updateQuestion(question, params) {
-      Object.keys(params).forEach(function(key) {
-        if(params[key]!==undefined) {
-          question.set(key,params[key]);
-        }
+    saveAnswer(params) {
+      var newAnswer = this.store.createRecord('answer', params);
+      var question = params.question;
+      question.get('answers').addObject(newAnswer);
+      newAnswer.save().then(function() {
+        return question.save();
       });
-      question.save();
-      this.transitionTo('index');
-    },
-
-    destroyQuestion(question) {
-      question.destroyRecord();
-      this.transitionTo('index');
+      this.transitionTo('question', params.question);
     }
+  //   updateQuestion(question, params) {
+  //     Object.keys(params).forEach(function(key) {
+  //       if(params[key]!==undefined) {
+  //         question.set(key,params[key]);
+  //       }
+  //     });
+  //     question.save();
+  //     this.transitionTo('index');
+  //   },
+  //
+  //   destroyQuestion(question) {
+  //     question.destroyRecord();
+  //     this.transitionTo('index');
+  //   }
   }
 });

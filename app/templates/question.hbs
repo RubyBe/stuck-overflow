@@ -1,5 +1,9 @@
 <h2>Question: {{model.title}}</h2>
 
-{{update-question question=model updateQuestion="updateQuestion"}}
+{{new-answer saveAnswer="saveAnswer" question=model}}
 
-{{question-detail question=model destroyQuestion="destroyQuestion"}}
+{{question-tile question=model destroyQuestion="destroyQuestion"}}
+
+<!-- {{update-question question=model updateQuestion="updateQuestion"}}
+
+{{question-detail question=model destroyQuestion="destroyQuestion"}} -->
