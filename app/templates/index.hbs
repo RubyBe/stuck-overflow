@@ -1,12 +1,13 @@
 <h4>A wealth of stuck!</h4>
 
-<h3>Answers</h3>
+<h3>All Answers</h3>
 <ul>
   {{#each model.answers as |answer|}}
     {{answer-tile answer=answer}}
   {{/each}}
 </ul>
 
+Ask your question about anything here, or click an existing question to add an answer.
 
 <h3>Questions</h3>
 <ul>
@@ -16,5 +17,3 @@
 </ul>
 
 {{new-question saveQuestion="saveQuestion"}}
-
-Ask your question about anything here, or answer an existing question.

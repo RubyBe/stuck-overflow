@@ -1,10 +1,11 @@
-<h2>Question: {{model.title}}</h2>
-
+<h3>Question: {{model.title}}</h3>
+<h4>Associated Answers:</h4>
+<ul>
+  {{#each model.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
+</ul>
 
 {{new-answer saveAnswer="saveAnswer" question=model}}
 
 {{question-detail question=model destroyQuestion="destroyQuestion"}}
-
-<!-- {{update-question question=model updateQuestion="updateQuestion"}}
-
-{{question-detail question=model destroyQuestion="destroyQuestion"}} -->
