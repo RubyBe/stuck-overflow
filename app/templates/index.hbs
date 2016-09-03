@@ -1,11 +1,5 @@
-<h4>A wealth of stuck!</h4>
-
-<h3>All Answers</h3>
-<ul>
-  {{#each model.answers as |answer|}}
-    {{answer-tile answer=answer}}
-  {{/each}}
-</ul>
+<h3><em>You think you're stuck? So is almost everyone else!</em></h3>
+<h2>Welcome to an Overflow of Stuck</h2>
 
 Ask your question about anything here, or click an existing question to add an answer.
 
@@ -17,3 +11,10 @@ Ask your question about anything here, or click an existing question to add an a
 </ul>
 
 {{new-question saveQuestion="saveQuestion"}}
+
+<h4>Or just browse all answers</h4>
+<ul>
+  {{#each model.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
+</ul>

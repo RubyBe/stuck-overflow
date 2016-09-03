@@ -1,7 +1,7 @@
-  <li> {{#link-to 'answer' answer.id}} Author {{answer.author}}'s answer to {{answer.question.title}} is: {{answer.content}} {{/link-to}}
-    {{#if isImageShowing }}
+  <li> {{#link-to 'answer' answer.id}}{{answer.content}} {{/link-to}}
+    <!-- {{#if isImageShowing }}
      <p><img src={{answer.image}} {{action 'imageHide'}}/></p>
     {{else}}
       <button {{action 'imageShow'}}>Show Image</button>
-    {{/if}}
+    {{/if}} -->
   </li>

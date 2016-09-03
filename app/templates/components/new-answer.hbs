@@ -6,30 +6,21 @@
         <label for="author">Author</label>
         {{input value=author id="author"}}
       </div>
-
       <div class="form-group">
         <label for="content">Answer</label>
         {{input value=content id="content"}}
       </div>
-
       <div class="form-group">
         <label for="details">Additional Details</label>
         {{input value=details id="details"}}
       </div>
-
       <div class="form-group">
         <label for="image">Image/Diagrams</label>
         {{input value=image id="image"}}
       </div>
-
-      <!-- <div class="form-group">
-        <label for="question">Question Being Answered</label>
-        {{input value=question id="question"}}
-      </div> -->
-
       <button {{action 'saveAnswer'}}>Save</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'answerFormShow'}}>New Answer</button>
+  <button {{action 'answerFormShow'}}>Have a better answer? Add it!</button>
 {{/if}}
