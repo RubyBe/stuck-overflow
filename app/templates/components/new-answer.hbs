@@ -3,22 +3,22 @@
   <div>
     <form>
       <div class="form-group">
-        <label for="author">Author</label>
+        <label for="author">Your user name:</label>
         {{input value=author id="author"}}
       </div>
       <div class="form-group">
-        <label for="content">Answer</label>
+        <label for="content">Brief description of your answer:</label>
         {{input value=content id="content"}}
       </div>
       <div class="form-group">
-        <label for="details">Additional Details</label>
+        <label for="details">Provide details of your solution:</label>
         {{input value=details id="details"}}
       </div>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="image">Image/Diagrams</label>
         {{input value=image id="image"}}
-      </div>
-      <button {{action 'saveAnswer'}}>Save</button>
+      </div> -->
+      <button {{action 'saveAnswer'}}>Save this answer!</button>
     </form>
   </div>
 {{else}}

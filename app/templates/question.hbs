@@ -1,5 +1,6 @@
 <h2>Title of this question: {{model.title}}</h2>
 <h3>Full content of this question: {{model.content}}</h3>
+{{question-detail question=model destroyQuestion="destroyQuestion"}}
 <h4>Associated Answers:</h4>
 <ul>
   {{#each model.answers as |answer|}}
@@ -8,5 +9,3 @@
 </ul>
 
 {{new-answer saveAnswer="saveAnswer" question=model}}
-
-{{question-detail question=model destroyQuestion="destroyQuestion"}}
