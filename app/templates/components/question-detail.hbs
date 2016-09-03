@@ -1,5 +1,9 @@
-<h1>Question Detail</h1>
+<h4>Associated Answers</h4>
 
-Question Title: {{question.title}}
+<ul>
+  {{#each model as |question|}}
+    {{question.answer.content}}
+  {{/each}}
+</ul>
 
 <button {{action 'deleteQuestion' question}}>Delete this question</button>
