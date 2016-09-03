@@ -13,7 +13,7 @@ export default Ember.Route.extend({
         return question.save();
       });
       this.transitionTo('question', params.question);
-    }
+    },
   //   updateQuestion(question, params) {
   //     Object.keys(params).forEach(function(key) {
   //       if(params[key]!==undefined) {
@@ -24,9 +24,9 @@ export default Ember.Route.extend({
   //     this.transitionTo('index');
   //   },
   //
-  //   destroyQuestion(question) {
-  //     question.destroyRecord();
-  //     this.transitionTo('index');
-  //   }
+    destroyQuestion(question) {
+      question.destroyRecord();
+      this.transitionTo('index');
+    }
   }
 });
