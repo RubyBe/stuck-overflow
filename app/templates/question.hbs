@@ -1,11 +1,29 @@
-<h2>Title of this question: {{model.title}}</h2>
-<h3>Full content of this question: {{model.content}}</h3>
-{{question-detail question=model destroyQuestion="destroyQuestion"}}
-<h4>Associated Answers:</h4>
+<h2> {{model.title}}</h2>
+
+<div class="container" id = "ad">
+  <h5>Stuck Overflow Jobs</h5>
+  <img src="/assets/images/stick.png" height="25px" width="25px"/>
+  <button type="button" name="button">Get Started</button>
+</div>
+
+<h4>This question already has answers:</h4>
 <ul>
   {{#each model.answers as |answer|}}
     {{answer-tile answer=answer}}
   {{/each}}
 </ul>
+<hr />
+<div class="row">
+  <div class="col-xs-2">
+    <h4>Vote</h4>
+  </div>
+  <div class="col-xs-10">
+    <p>{{model.content}}</p>
+  </div>
+</div>
+<hr />
+<div class="container">
+  {{question-detail question=model destroyQuestion="destroyQuestion"}}
 
-{{new-answer saveAnswer="saveAnswer" question=model}}
+  {{new-answer saveAnswer="saveAnswer" question=model}}
+</div>
