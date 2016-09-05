@@ -1,4 +1,14 @@
-<h2>More Information about {{model.author}}'s answers to {{model.question.title}}</h2>
+<h3>Question: {{model.question.title}}</h3>
+<h2>Answer: {{model.content}}</h2>
+<h4><em>Contributed by {{model.author}}</em></h4>
+<br>
+<div class="container" id = "ad">
+  <h5>Stuck Overflow Jobs
+    <img src="/assets/images/stick.png" height="25px" width="25px"/>
+    <button type="button" name="button">Get Started</button>
+  </h5>
+</div>
+<br><br>
 
 {{update-answer answer=model update="update"}}
 
