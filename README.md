@@ -14,17 +14,10 @@ You will need the following things properly installed on your computer.
 * [Ember CLI](http://ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
 
-## Installation
-
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
-
 ### Deploying
 
-* Clone this repository
-* Run the following commands:
+* Clone this repository 
+* Run the following commands in the new project directory:
   * npm install
   * bower install
 * Start the server
