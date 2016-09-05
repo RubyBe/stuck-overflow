@@ -1,7 +1,8 @@
-# Stuck-overflow
+# Stuck-Overflow
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+#### By _**Sid Benavente**_
+
+Stuck-Overflow is a demonstration of a repository of questions and answers. The question model has many instances of the answer model; each answer belongs to a single question instance.
 
 ## Prerequisites
 
@@ -20,34 +21,26 @@ You will need the following things properly installed on your computer.
 * `npm install`
 * `bower install`
 
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
 ### Deploying
 
-Specify what it takes to deploy your app.
+* Clone this repository
+* Run the following commands:
+  * npm install
+  * bower install
+* Start the server
+  * ember serve
+  * Navigate to [http://localhost:4200](http://localhost:4200).
 
-## Further Reading / Useful Links
+#### Known Bugs / Unimplemented Features
+None at this time.
 
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+#### Support and contact details
+Please contact the authors if you have any questions or comments.
 
+#### Technologies Used
+This web application was created using Ember and Javascript
+
+#### License
+Copyright (c) 2016 _**Sid Benavente**_
+
+This software is licensed under the MIT license.
