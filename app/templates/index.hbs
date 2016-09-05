@@ -26,23 +26,23 @@
     <div class="row" id="display-rows">
       <div class="col-xs-2">
         {{#each model.questions as |question|}}
-          1
+          <p>1</p>
         {{/each}}
       </div>
       <div class="col-xs-2">
         {{#each model.questions as |question|}}
-          {{answer-count question}}
+          <p>{{answer-count question}}</p>
         {{/each}}
       </div>
       <div class="col-xs-2">
         {{#each model.questions as |question|}}
-          500
+          <p>500</p>
         {{/each}}
       </div>
       <div class="col-xs-6" id="question-row">
         {{#each model.questions as |question|}}
-        {{question-answer-count question}}
-        {{#link-to 'question' question.id}} {{question.title}} {{/link-to}}
+          <p>{{question-answer-count question}}
+          {{#link-to 'question' question.id}} {{question.title}} {{/link-to}}</p>
         {{/each}}
       </div>
     </div>
