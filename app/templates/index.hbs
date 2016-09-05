@@ -9,31 +9,49 @@
 
 <div class="container" id="questions">
   <h3>Top Questions</h3>
-  <div class="row">
-    <div class="col-xs-2">
-      <p>votes</p>
-      <p>5</p>
-      <p>3</p>
+    <div class="row" id="display-headers">
+      <div class="col-xs-2">
+        votes
+      </div>
+      <div class="col-xs-2">
+        answers
+      </div>
+      <div class="col-xs-2">
+        views
+      </div>
+      <div class="col-xs-6" id="question-header">
+        question
+      </div>
     </div>
-    <div class="col-xs-2">
-      <p>answers</p>
-      <p>1</p>
-      <p>2</p>
-    </div>
-    <div class="col-xs-2">
-      <p>views</p>
-      <p>5,001</p>
-      <p>397</p>
-    </div>
-    <div class="col-xs-6">
-      <p>Question</p>
+    <div class="row" id="display-rows">
+      <div class="col-xs-2">
         {{#each model.questions as |question|}}
-        <p>{{#link-to 'question' question.id}} {{question.title}} {{/link-to}}</p>
+          0
         {{/each}}
+      </div>
+      <div class="col-xs-2">
+        {{#each model.questions as |question|}}
+          {{answer-count question}}
+        {{/each}}
+      </div>
+      <div class="col-xs-2">
+        {{#each model.questions as |question|}}
+          500
+        {{/each}}
+      </div>
+      <div class="col-xs-6" id="question-row">
+        {{#each model.questions as |question|}}
+        {{question-answer-count question}}
+        {{#link-to 'question' question.id}} {{question.title}} {{/link-to}}
+        {{/each}}
+      </div>
     </div>
   </div>
-  {{new-question saveQuestion="saveQuestion"}}
-</div>
+  <br><br>
+  <div class="container">
+    {{new-question saveQuestion="saveQuestion"}}
+  </div>
+
 <hr />
 
 <div class="container" id="answers">
