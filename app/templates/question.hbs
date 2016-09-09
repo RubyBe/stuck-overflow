@@ -27,7 +27,14 @@
 </div>
 <hr />
 <div class="container">
+  <button {{action 'addToCart' question}}>Add to my Question List</button>
   {{question-detail question=model destroyQuestion="destroyQuestion"}}
 
   {{new-answer saveAnswer="saveAnswer" question=model}}
+</div>
+<div class="container">
+  <h3>My Question List</h3>
+  <p>
+    {{display-cart}}
+  </p>
 </div>

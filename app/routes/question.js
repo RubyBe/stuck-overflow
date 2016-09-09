@@ -4,6 +4,9 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.findRecord('question', params.question_id);
   },
+  
+  questionCart: Ember.inject.service(),
+
   actions: {
     saveAnswer(params) {
       var newAnswer = this.store.createRecord('answer', params);
@@ -14,16 +17,9 @@ export default Ember.Route.extend({
       });
       this.transitionTo('question', params.question);
     },
-  //   updateQuestion(question, params) {
-  //     Object.keys(params).forEach(function(key) {
-  //       if(params[key]!==undefined) {
-  //         question.set(key,params[key]);
-  //       }
-  //     });
-  //     question.save();
-  //     this.transitionTo('index');
-  //   },
-  //
+    addToCart(item) {
+      this.get('questionCart').add(item);
+    },
     destroyQuestion(question) {
       var answer_deletions = question.get('answers').map(function(answer) {
         return answer.destroyRecord();
