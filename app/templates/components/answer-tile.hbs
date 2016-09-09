@@ -1,8 +1,2 @@
-  <li> {{#link-to 'answer' answer.id}}{{answer.content}} {{/link-to}}
-    (contributed by {{answer.author}})
-    <!-- {{#if isImageShowing }}
-     <p><img src={{answer.image}} {{action 'imageHide'}}/></p>
-    {{else}}
-      <button {{action 'imageShow'}}>Show Image</button>
-    {{/if}} -->
+  <li> {{#link-to 'answer' answer.id}}{{authoredAnswer}} {{/link-to}}
   </li>

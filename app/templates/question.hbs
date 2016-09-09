@@ -8,7 +8,7 @@
 </div>
 <br><br>
 
-<h4>This question already has answers:</h4>
+<h4>This question has answers:</h4>
 <ul>
   {{#each model.answers as |answer|}}
     {{answer-tile answer=answer}}
@@ -17,9 +17,9 @@
 <hr />
 <div class="row">
   <div class="col-xs-2">
-    <h5><span class="glyphicon glyphicon-chevron-up"></span></h5>
+    <button class="glyphicon glyphicon-chevron-up"  id="vote-up"></button>
     <h4>Vote</h4>
-    <h5><span class="glyphicon glyphicon-chevron-down"></span></h5>
+    <button class="glyphicon glyphicon-chevron-down" id="vote-down"></button>
   </div>
   <div class="col-xs-10">
     <p>{{model.content}}</p>
@@ -27,7 +27,7 @@
 </div>
 <hr />
 <div class="container">
-  <button {{action 'addToCart' question}}>Add to my Question List</button>
+  <button {{action 'addToCart' model.title}}>Add to my Question List</button>
   {{question-detail question=model destroyQuestion="destroyQuestion"}}
 
   {{new-answer saveAnswer="saveAnswer" question=model}}
